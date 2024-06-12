@@ -18,6 +18,8 @@ class Vector2D:
     if isinstance(other, Vector2D):
         return self.x == other.x and self.y == other.y
     return NotImplemented
+  def distance(self,other):
+    return math.sqrt((self.x - other.x) **2 + (self.y - other.y) ** 2)
 
 v1 = Vector2D(10,20)
 v2 = Vector2D(2,5)
