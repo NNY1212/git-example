@@ -24,7 +24,7 @@ class Vector2D:
     return math.sqrt((self.x - other.x) **2 + (self.y - other.y) ** 2)
   
   class Line2D:
-    def get_vector_instance(self,p1,p2):
+    def __init__(self,p1,p2):
       if isinstance(p1,Vector2D) and (p2,Vector2D):
         self.p1 = p1
         self.p2 = p2
@@ -43,6 +43,8 @@ class Vector2D:
     def __ge__(self,other):
       if isinstance(other, self):
         return self.length() >= other.length()
+    def length(self):
+      return self.p1.distance(self.p2)
       
       
       
