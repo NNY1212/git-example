@@ -28,6 +28,25 @@ class Vector2D:
       if isinstance(p1,Vector2D) and (p2,Vector2D):
         self.p1 = p1
         self.p2 = p2
+    def __eq__(self, other):
+      if isinstance(other, self):
+        return self.length() == other.length()
+    def __lt__(self,other):
+      if isinstance(other, self):
+        return self.length() < other.length()
+    def __le__(self,other):
+      if isinstance(other, self):
+        return self.length() <= other.length()
+    def __gt__(self,other):
+      if isinstance(other, self):
+        return self.length() > other.length()
+    def __ge__(self,other):
+      if isinstance(other, self):
+        return self.length() >= other.length()
+      
+      
+      
+    
 
 v1 = Vector2D(10,20)
 v2 = Vector2D(2,5)
