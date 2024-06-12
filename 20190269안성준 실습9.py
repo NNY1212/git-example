@@ -22,6 +22,12 @@ class Vector2D:
     return NotImplemented
   def distance(self,other):
     return math.sqrt((self.x - other.x) **2 + (self.y - other.y) ** 2)
+  
+  class Line2D:
+    def get_vector_instance(self,p1,p2):
+      if isinstance(p1,Vector2D) and (p2,Vector2D):
+        self.p1 = p1
+        self.p2 = p2
 
 v1 = Vector2D(10,20)
 v2 = Vector2D(2,5)
